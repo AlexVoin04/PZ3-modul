@@ -62,6 +62,7 @@ namespace ConsoleApp1
                 Authorization authorization = new Authorization {ID = authid , Login = login, Password = hash.sha256_hash(password) };
                 db2.CreateEmployees(employees, employeeInformation, authorization);
                 Console.WriteLine("Учетная запись добавлена");
+                Console.ReadLine();
             }
             else
             {
