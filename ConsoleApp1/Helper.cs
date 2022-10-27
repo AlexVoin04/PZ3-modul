@@ -11,7 +11,6 @@ namespace ConsoleApp1
 {
     public class Helper
     {
-        
         private static Model.RestaurantEntities s_restaurantEntities;
         public static Model.RestaurantEntities GetContext()
         {
@@ -39,13 +38,13 @@ namespace ConsoleApp1
 
         public int GetLastIDInfo()
         {
-            int id = s_restaurantEntities.EmployeeInformation.OrderByDescending(employees => employees.ID).First().ID;
+            int id = s_restaurantEntities.EmployeeInformation.OrderByDescending(employeeInformation => employeeInformation.ID).First().ID;
             return id+1;
         }
 
         public int GetLastIDAuth()
         {
-            int id = s_restaurantEntities.Authorization.OrderByDescending(employees => employees.ID).First().ID;
+            int id = s_restaurantEntities.Authorization.OrderByDescending(authorization => authorization.ID).First().ID;
             return id + 1;
         }
     }
