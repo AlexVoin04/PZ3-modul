@@ -47,5 +47,11 @@ namespace ConsoleApp1
             int id = s_restaurantEntities.Authorization.OrderByDescending(authorization => authorization.ID).First().ID;
             return id + 1;
         }
+
+        public int GetLastIDPost()
+        {
+            int id = s_restaurantEntities.Posts.OrderByDescending(posts => posts.ID).First().ID;
+            return id+1;
+        }
     }
 }
